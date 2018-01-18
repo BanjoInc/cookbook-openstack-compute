@@ -5,6 +5,10 @@
     <% if value.class == Hash -%>
 <%= "# #{value['comment']}" -%>
 <%= key %> = <%= value['set_to'] %>
+    <% elsif value.class == Array -%>
+      <% value.each do |list_value| %>
+<%= key %> = <%= list_value %>
+      <% end -%>
     <% else -%>
 <%= key %> = <%= value %>
     <% end -%>
