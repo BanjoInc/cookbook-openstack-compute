@@ -6,7 +6,7 @@
 <%= "# #{value['comment']}" -%>
 <%= key %> = <%= value['set_to'] %>
     <% elsif value.class == Array -%>
-    <% for list_value in value %>
+    <% value.each do |list_value| %>
 <%= key %> = <%= list_value %>
     <% end -%>
     <% else -%>
